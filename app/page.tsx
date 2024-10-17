@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import IntroSection from "../components/IntroSection"
-import Footer from "../components/Footer"
+import Footer from "../components/FeaturesSection"
+import FeatureSection from "../components/Footer"
 
 export default function Home() {
   return (
@@ -82,6 +83,7 @@ export default function Home() {
         </div>
         <IntroSection />
         <Footer />
+        <FeatureSection />
       </footer>
     </div>
   );
