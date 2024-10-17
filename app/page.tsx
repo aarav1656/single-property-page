@@ -3,6 +3,7 @@ import Image from 'next/image';
 import IntroSection from "../components/IntroSection"
 import Footer from "../components/FeaturesSection"
 import FeatureSection from "../components/Footer"
+import Gallery from "../components/Gallery"
 
 export default function Home() {
   return (
@@ -83,6 +84,7 @@ export default function Home() {
         </div>
         <IntroSection />
         <Footer />
+        <Gallery />
         <FeatureSection />
       </footer>
     </div>
