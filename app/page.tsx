@@ -4,6 +4,7 @@ import IntroSection from "../components/IntroSection"
 import Footer from "../components/FeaturesSection"
 import FeatureSection from "../components/Footer"
 import Gallery from "../components/Gallery"
+import ProjectTeam from "../components/ProjectTeam"
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           <div className="flex justify-between items-center py-4">
             <div className="text-2xl font-bold flex items-center">
               {/* <Image src="/logo.png" alt="Portofino Logo" width={40} height={40} /> */}
-              <span className="ml-2">Portofino</span>
+              <span className="ml-2">Affiliate Partner Blueroof India</span>
             </div>
             <nav className="hidden md:flex space-x-4">
               <select className="bg-transparent">
@@ -85,6 +86,7 @@ export default function Home() {
         <IntroSection />
         <Footer />
         <Gallery />
+        <ProjectTeam />
         <FeatureSection />
       </footer>
     </div>
