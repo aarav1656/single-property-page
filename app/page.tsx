@@ -13,7 +13,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-2xl font-bold flex items-center">
-              {/* <Image src="/logo.png" alt="Portofino Logo" width={40} height={40} /> */}
               <span className="ml-2">Affiliate Partner Blueroof India</span>
             </div>
             <nav className="hidden md:flex space-x-4">
@@ -34,31 +33,28 @@ export default function Home() {
       </header>
 
       <main className="relative">
-        <div className="absolute inset-0">
-          <Image 
-            src="/House.jpeg" 
-            alt="House for sale" 
-            layout="fill" 
-            objectFit="cover" 
-            quality={100}
+        <div className="h-[calc(100vh-80px)] relative overflow-hidden">
+          <img 
+            src="https://static.wixstatic.com/media/e4b0d9_ba260b800e8545249467d24bf5e2cc32~mv2.jpg/v1/fill/w_1785,h_792,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/downtown-min-compressed_edited.jpg" 
+            alt="" 
+            className="absolute inset-0 w-full h-full object-cover"
           />
-        </div>
-
-        <div className="relative z-10 flex flex-col md:flex-row h-[calc(100vh-80px)]">
-          <div className="bg-black bg-opacity-70 text-white p-8 md:w-1/3 flex flex-col justify-center">
-            <div className="bg-yellow-400 text-black inline-block px-2 py-1 mb-4 text-sm">FOR SALE</div>
-            <h1 className="text-4xl font-light mb-2">123 Thane</h1>
-            <h2 className="text-4xl font-light mb-2">maharashtra</h2>
-            <h3 className="text-4xl font-light mb-4">CA 90210</h3>
-            <p className="text-yellow-400 mb-4">Offered at $759,000</p>
-            <button className="border border-white text-white px-4 py-2 hover:bg-white hover:text-black transition-colors w-max">
-              Learn more
-            </button>
-          </div>
-          <div className="md:w-2/3 relative">
-            <div className="absolute bottom-8 right-8 bg-yellow-400 rounded-full p-4 cursor-pointer">
-              <div className="text-sm font-bold">Schedule</div>
-              <div className="text-sm font-bold">your Visit!</div>
+          <div className="absolute inset-0 flex flex-col md:flex-row">
+            <div className="bg-black bg-opacity-70 text-white p-8 md:w-1/3 flex flex-col justify-center">
+              <div className="bg-yellow-400 text-black inline-block px-2 py-1 mb-4 text-sm">FOR SALE</div>
+              <h1 className="text-4xl font-light mb-2">123 Thane</h1>
+              <h2 className="text-4xl font-light mb-2">maharashtra</h2>
+              <h3 className="text-4xl font-light mb-4">CA 90210</h3>
+              <p className="text-yellow-400 mb-4">Offered at $759,000</p>
+              <button className="border border-white text-white px-4 py-2 hover:bg-white hover:text-black transition-colors w-max">
+                Learn more
+              </button>
+            </div>
+            <div className="md:w-2/3 relative">
+              <div className="absolute bottom-8 right-8 bg-yellow-400 rounded-full p-4 cursor-pointer">
+                <div className="text-sm font-bold">Schedule</div>
+                <div className="text-sm font-bold">your Visit!</div>
+              </div>
             </div>
           </div>
         </div>

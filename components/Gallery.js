@@ -18,22 +18,22 @@ const Gallery = () => {
       <div className="grid grid-cols-3 gap-2">
         <div className="col-span-2 row-span-2 h-96 bg-gray-200">
           {/* Placeholder for the large image */}
-          <img src="https://assets.website-files.com/5d5eb926aeeaa5f076cb27aa/5d5ef0bfe396d162ce6bb38b_2c8f0c82098099.5d1337b11a07a.jpg" alt="Large property image" className="w-full h-full object-cover" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3jx4EcmoJhy_0c5IPLZCDlb_5O3RDPaMNkA&s" alt="Large property image" className="w-full h-full object-cover" />
         </div>
         <div className="h-48 bg-gray-200">
-          <img src="https://assets.website-files.com/5d5eb926aeeaa5f076cb27aa/5d5ef1626e0dbc7951ad33cc_62db1f82098099.5d1337b11a460.jpg" alt="Property image 2" className="w-full h-full object-cover" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyCJgQBlujO46TVTEPvpkoY0yvckRx6BgWmQ&s" alt="Property image 2" className="w-full h-full object-cover" />
         </div>
         <div className="h-48 bg-gray-200">
           <img src="https://assets.website-files.com/5d5eb926aeeaa5f076cb27aa/5d5ef2ca6e0dbcfe9ead3887_2fdbb282098099.5d28a27961b18.jpg" alt="Property image 3" className="w-full h-full object-cover" />
         </div>
         <div className="h-48 bg-gray-200">
-          <img src="https://assets.website-files.com/5d5eb926aeeaa5f076cb27aa/5d5ef2ca6e0dbcfe9ead3887_2fdbb282098099.5d28a27961b18.jpg" alt="Property image 4" className="w-full h-full object-cover" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbPyjR-VTF_KeeIkPWxZivdu-l9M8h8H5HnA&s" alt="Property image 4" className="w-full h-full object-cover" />
         </div>
         <div className="h-48 bg-gray-200">
-          <img src="https://assets.website-files.com/5d5eb926aeeaa5f076cb27aa/5d5ef25ee396d146a06bd92d_9f62b182098099.5d28a27962ad3.jpg" alt="Property image 5" className="w-full h-full object-cover" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLsxdDuQffoWPSk0Nph6g7_TB1PjGutjLXQ&s" alt="Property image 5" className="w-full h-full object-cover" />
         </div>
         <div className="h-48 bg-gray-200">
-          <img src="https://assets.website-files.com/5d5eb926aeeaa5f076cb27aa/5d5ef1626e0dbc7951ad33cc_62db1f82098099.5d1337b11a460.jpg" alt="Property image 2" className="w-full h-full object-cover" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQExJewvAv_ScFjfu1hlHMojuT2XF_lvpe4RA&s" alt="Property image 2" className="w-full h-full object-cover" />
         </div>
       </div>
     </div>
