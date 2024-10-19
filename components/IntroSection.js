@@ -1,37 +1,74 @@
 import React from 'react';
-import Image from 'next/image';
 
 const IntroSection = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-sm uppercase tracking-wider mb-2 text-gray-500">Intro</h2>
-        <h3 className="text-center font-serif text-4xl mb-12 text-gray-800 max-w-3xl mx-auto">
-          From more than 25 years we have provided real estate services with honesty, trust and transparency
-        </h3>
+    <section className="py-16 bg-white text-black">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="absolute top-0 right-0 bg-yellow-400 text-black py-2 px-4 rounded-full">
+          <a href="tel:+917027479999" className="flex items-center">
+            {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg> */}
+            
+          </a>
+        </div>
         
-        <div className="flex flex-col md:flex-row items-start">
-          <div className="md:w-1/2 relative">
-            <div className="bg-yellow-400 absolute -left-4 -bottom-4 right-4 top-4 -z-10"></div>
-            <Image
-              src="/two.jpg"  // Replace with your image path
-              alt="Modern house"
-              width={600}
-              height={400}
-              className="object-cover"
-            />
-          </div>
-          <div className="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-            <p className="text-gray-600 mb-6 font-light">
-              Tras pulvinar ultricies vehicula. Cras et nulla id lorem vulputate pulvinar eget non neque Proin feugiat justo vitae euismod fringilla.
-            </p>
-            <p className="text-gray-600 mb-6 font-light">
-              In a nunc commodo, elementum metus, aliquam metus nulla porttitor malesuada urna non convallis luctus fermentum elementum egestas. Donec lobortis lectus ut nisi ultricies, in scelerisque ante egestas. Maecenas quis ipsum.
-            </p>
-            <p className="text-gray-600 mb-6 font-light">
-              Pulvinar tortor nec neque pellentesque ullamcorper bibendum eu orci. Duis non ante quis est aliquet bibendum. Curabitur fermentum a odio sed sodales.
-            </p>
-          </div>
+        <h1 className="text-4xl font-bold mb-6 text-center">WELCOME TO 25 DOWNTOWN, WILLINGDON : MUMBAI.</h1>
+        
+        <p className="text-center mb-8 max-w-3xl mx-auto">
+          From more than 25 years we have provided real estate services with honesty, trust and transparency. 25 Downtown is an Homage to A Great Chapter in Mumbai's History. These Beautiful Residences Come with The Ultimate Indulgence-Unrestricted Views of The Willingdon Sports Club, Mahalaxmi Racecourse and The Arabian Sea. Exquisite Parts of Mumbai.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <ul className="space-y-2">
+            <li className="flex items-center">
+              <svg className="h-5 w-5 mr-2 text-yellow-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M5 13l4 4L19 7"></path>
+              </svg>
+              Land Parcel 5.5 Acres Approx
+            </li>
+            <li className="flex items-center">
+              <svg className="h-5 w-5 mr-2 text-yellow-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M5 13l4 4L19 7"></path>
+              </svg>
+              Unhindered Views of The Willingdon Sports Club
+            </li>
+            <li className="flex items-center">
+              <svg className="h-5 w-5 mr-2 text-yellow-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M5 13l4 4L19 7"></path>
+              </svg>
+              The Sky – Media Deck at The Terrace Level
+            </li>
+          </ul>
+          <ul className="space-y-2">
+            <li className="flex items-center">
+              <svg className="h-5 w-5 mr-2 text-yellow-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M5 13l4 4L19 7"></path>
+              </svg>
+              Mesmerizing Views of Arabian Sea
+            </li>
+            <li className="flex items-center">
+              <svg className="h-5 w-5 mr-2 text-yellow-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M5 13l4 4L19 7"></path>
+              </svg>
+              Modern Lifestyle Amenities
+            </li>
+            <li className="flex items-center">
+              <svg className="h-5 w-5 mr-2 text-yellow-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M5 13l4 4L19 7"></path>
+              </svg>
+              Excellent Connectivity to Business Hubs
+            </li>
+          </ul>
+        </div>
+        
+        <div className="flex justify-center space-x-4">
+          <button className="bg-yellow-400 text-black px-6 py-2 rounded-md hover:bg-yellow-500 transition duration-300">
+            Book Site Visit
+          </button>
+          <button className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition duration-300">
+            Request For E-Brochure
+          </button>
         </div>
       </div>
     </section>
