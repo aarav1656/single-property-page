@@ -5,10 +5,10 @@ const IntroSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-3xl font-light mb-2 text-gray-800">INTRO</h2>
-        <p className="text-center text-xl mb-12 text-gray-600 max-w-3xl mx-auto">
-          From more than 25 years we have provided real estate services with honesty trust and transparency
-        </p>
+        <h2 className="text-center text-sm uppercase tracking-wider mb-2 text-gray-500">Intro</h2>
+        <h3 className="text-center font-serif text-4xl mb-12 text-gray-800 max-w-3xl mx-auto">
+          From more than 25 years we have provided real estate services with honesty, trust and transparency
+        </h3>
         
         <div className="flex flex-col md:flex-row items-start">
           <div className="md:w-1/2 relative">
@@ -22,28 +22,15 @@ const IntroSection = () => {
             />
           </div>
           <div className="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 font-light">
               Tras pulvinar ultricies vehicula. Cras et nulla id lorem vulputate pulvinar eget non neque Proin feugiat justo vitae euismod fringilla.
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 font-light">
               In a nunc commodo, elementum metus, aliquam metus nulla porttitor malesuada urna non convallis luctus fermentum elementum egestas. Donec lobortis lectus ut nisi ultricies, in scelerisque ante egestas. Maecenas quis ipsum.
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 font-light">
               Pulvinar tortor nec neque pellentesque ullamcorper bibendum eu orci. Duis non ante quis est aliquet bibendum. Curabitur fermentum a odio sed sodales.
             </p>
-            <div className="flex items-center">
-              <Image
-                src="/avatar.jpg"  // Replace with your avatar image path
-                alt="Rakesh Lakshar"
-                width={50}
-                height={50}
-                className="rounded-full"
-              />
-              <div className="ml-4">
-                <p className="font-semibold text-gray-800">Rakesh Lashkar</p>
-                <p className="text-sm text-gray-600">REAL ESTATE AGENT</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, DollarSign, Shield, Leaf, HelpCircle, Building } from 'lucide-react';
+import { Home, Layout, Eye, ShoppingBag, Building, MapPin } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
@@ -14,37 +14,37 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
 const FeaturesSection = () => {
   const features = [
     {
-      icon: Home,
+      icon: Layout,
       title: 'Exclusive Living Spaces',
       description:
         'Each floor houses only two spacious apartments in 4 and 5 BHK configurations. 4 BHK apartments have 3,400 sq. ft. of carpet area, and 5 BHK units offer 5,100 sq. ft. Jodi options available.',
     },
     {
-      icon: DollarSign,
+      icon: Home,
       title: 'Luxury Redefined',
       description:
         'Each residence features an expansive deck, along with a comprehensive array of outdoor and indoor amenities designed to cater to every lifestyle need.',
     },
     {
-      icon: Shield,
+      icon: Eye,
       title: 'Stunning Views',
       description:
         'Lower floors are surrounded by lush greenery, while higher floors provide breathtaking sea views, maximizing natural beauty and enhancing luxury living.',
     },
     {
-      icon: Leaf,
+      icon: ShoppingBag,
       title: 'Sophisticated Commercial Spaces',
       description:
         'High-end retail brands accommodated in the commercial segment. Separate residential and commercial entries maintain privacy and exclusivity for residents.',
     },
     {
-      icon: HelpCircle,
+      icon: Building,
       title: 'Architectural Ambition',
       description:
         'Planned towers rise up to the 70th floor (subject to approval), making them a significant architectural landmark in the area.',
     },
     {
-      icon: Building,
+      icon: MapPin,
       title: 'Prime Location and Amenities',
       description:
         'Easy access to key city areas. Thoughtfully designed amenities include fitness centers, swimming pools, landscaped gardens, and recreational facilities for a holistic living experience.',
