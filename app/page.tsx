@@ -7,6 +7,7 @@ import Gallery from "../components/Gallery"
 import ProjectTeam from "../components/ProjectTeam"
 import AmenitiesSection from "../components/AmenitiesSection"
 import LuxuryProjectPricing from "../components/LuxuryProjectPricing"
+import Wow from "../components/Wow"
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -49,6 +50,7 @@ export default function Home() {
         <IntroSection />
         <Footer />
         <Gallery />
+        <Wow />
         <AmenitiesSection />
         <LuxuryProjectPricing />
         <ProjectTeam />
