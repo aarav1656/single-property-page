@@ -15,14 +15,19 @@ const Footer = () => {
             <Image src="/s-cube-logo.png" alt="Blueroof" width={100} height={50} />
           </div>
           <div className="w-24 h-24 bg-gray-300">
-            {/* Placeholder for QR code */}
+          <Image
+              src="/qr.jpeg"
+              alt="QR code"
+              height={100}
+              width={100}
+            />
           </div>
         </div>
         
         <div className="text-xs text-gray-600 space-y-2">
           <p>Project RERA - P51900076617</p>
           <p>This Website is Managed By Blueroof</p>
-          <p>Affiliate Agent RERA No. - A51900010107</p>
+          <p>Affiliate Agent RERA No. - A51700028934</p>
         </div>
         
         <p className="mt-8 text-[10px] text-gray-600 leading-tight">

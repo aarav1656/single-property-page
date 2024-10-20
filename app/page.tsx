@@ -6,7 +6,7 @@ import FeatureSection from "../components/Footer"
 import Gallery from "../components/Gallery"
 import ProjectTeam from "../components/ProjectTeam"
 import AmenitiesSection from "../components/AmenitiesSection"
-
+import LuxuryProjectPricing from "../components/LuxuryProjectPricing"
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -50,6 +50,7 @@ export default function Home() {
         <Footer />
         <Gallery />
         <AmenitiesSection />
+        <LuxuryProjectPricing />
         <ProjectTeam />
         <FeatureSection />
       </footer>
