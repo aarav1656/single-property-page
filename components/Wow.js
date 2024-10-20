@@ -4,7 +4,8 @@ import styles from './page.module.scss'
 import Image from 'next/image';
 import Lenis from '@studio-freight/lenis'
 import { useTransform, useScroll, motion } from 'framer-motion';
-
+import Gallery from './Gallery';
+import AmenitiesSection from './AmenitiesSection';
 export default function Wow() {
   
   const gallery = useRef(null);
@@ -43,7 +44,9 @@ export default function Wow() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.spacer}></div>
+      <div className={styles.spacer}>
+      <Gallery />
+      </div>
       <div ref={gallery} className={styles.gallery}>
         <Column y={y}>
           <ImageContainer src="/1.jpeg" alt="Image 1" />
@@ -65,7 +68,9 @@ export default function Wow() {
           <ImageContainer src="/11.jpeg" alt="Image 11" />
         </Column>
       </div>
-      <div className={styles.spacer}></div>
+      <div className={styles.spacer}>
+      <AmenitiesSection />
+      </div>
     </main>
   )
 }

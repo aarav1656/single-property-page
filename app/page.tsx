@@ -49,9 +49,9 @@ export default function Home() {
       <footer className="bg-gray-100 py-4">
         <IntroSection />
         <Footer />
-        <Gallery />
+  
         <Wow />
-        <AmenitiesSection />
+
         <LuxuryProjectPricing />
         <ProjectTeam />
         <FeatureSection />
