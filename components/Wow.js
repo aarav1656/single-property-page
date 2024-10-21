@@ -1,54 +1,55 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import styles from './page.module.scss'
+import styles from './page.module.scss';
 import Image from 'next/image';
-import Lenis from '@studio-freight/lenis'
+import Lenis from '@studio-freight/lenis';
 import { useTransform, useScroll, motion } from 'framer-motion';
-import Gallery from './Gallery';
 import AmenitiesSection from './AmenitiesSection';
 import FeaturesSection from './FeaturesSection';
+import LuxuryProjectPricing from './LuxuryProjectPricing';
+import ProjectTeam from './ProjectTeam';
+
 export default function Wow() {
-  
   const gallery = useRef(null);
-  const [dimension, setDimension] = useState({width:0, height:0});
+  const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
   const { scrollYProgress } = useScroll({
     target: gallery,
-    offset: ['start end', 'end start']
-  })
+    offset: ['start end', 'end start'],
+  });
   const { height } = dimension;
-  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2])
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25])
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3])
+  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
-  useEffect( () => {
-    const lenis = new Lenis()
+  useEffect(() => {
+    const lenis = new Lenis();
 
     const raf = (time) => {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
 
     const resize = () => {
-      setDimension({width: window.innerWidth, height: window.innerHeight})
-    }
+      setDimension({ width: window.innerWidth, height: window.innerHeight });
+    };
 
-    window.addEventListener("resize", resize)
+    window.addEventListener('resize', resize);
     requestAnimationFrame(raf);
     resize();
 
     return () => {
-      window.removeEventListener("resize", resize);
-    }
-  }, [])
+      window.removeEventListener('resize', resize);
+    };
+  }, []);
 
   return (
     <main className={styles.main}>
       <div className={styles.spacer}>
-        <FeaturesSection />
+        <LuxuryProjectPricing />
       </div>
-      <div ref={gallery} className={styles.gallery}>
+      <div ref={gallery} className={styles.gallery} style={{ minHeight: `${height * 2}px` }}>
         <Column y={y}>
           <ImageContainer src="/1.jpeg" alt="Image 1" />
           <ImageContainer src="/2.jpeg" alt="Image 2" />
@@ -69,34 +70,33 @@ export default function Wow() {
           <ImageContainer src="/11.jpeg" alt="Image 11" />
         </Column>
       </div>
-      <div className={styles.spacer}>
       <AmenitiesSection />
-      </div>
+      <FeaturesSection />
+
+      <ProjectTeam />
+     
     </main>
-  )
+  );
 }
 
 const Column = ({ y, children }) => {
   return (
-    <motion.div 
-      className={styles.column}
-      style={{y}}
-    >
+    <motion.div className={styles.column} style={{ y }}>
       {children}
     </motion.div>
-  )
-}
+  );
+};
 
 const ImageContainer = ({ src, alt }) => {
   return (
     <div className={styles.imageContainer}>
-      <Image 
+      <Image
         src={src}
         alt={alt}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        style={{objectFit: 'cover'}}
+        style={{ objectFit: 'cover' }}
       />
     </div>
-  )
-}
+  );
+};

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Users } from 'lucide-react';
+import Footer from './Footer';
 
 const ProjectTeam = () => {
   const teamMembers = [
@@ -58,6 +59,7 @@ const ProjectTeam = () => {
           className="rounded-lg shadow-lg max-w-3xl w-full"
         />
       </div>
+      <Footer />
     </div>
   );
 };
