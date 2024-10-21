@@ -38,7 +38,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex items-center bg-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-500 transition duration-300"
               >
-                <span className="ml-2">+91 77384 34767</span>
+                <span className="ml-2">+91 7977144095 </span>
               </a>
             </div>
           </div>
