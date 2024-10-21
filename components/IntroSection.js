@@ -15,7 +15,7 @@ const IntroSection = () => {
         
         <h1 className="text-4xl font-bold mb-6 text-center">WELCOME TO 25 DOWNTOWN, WILLINGDON : MUMBAI.</h1>
         
-        <p className="text-center mb-8 max-w-3xl mx-auto">
+        <p className="text-center mb-8 max-w-4xl mx-auto">
           From more than 25 years we have provided real estate services with honesty, trust and transparency. 25 Downtown is an Homage to A Great Chapter in Mumbai's History. These Beautiful Residences Come with The Ultimate Indulgence-Unrestricted Views of The Willingdon Sports Club, Mahalaxmi Racecourse and The Arabian Sea. Exquisite Parts of Mumbai.
         </p>
         

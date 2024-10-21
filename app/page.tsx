@@ -72,8 +72,8 @@ export default function Home() {
             </h2>
           </div>
           <div className="absolute top-4 right-4 text-white text-right">
-            <div className="text-xs font-light">Affiliate Partner</div>
-            <div className="text-xs font-light">Blueroof India</div>
+            <div className="text-xs font-light filter blur-sm" style={{ filter: 'blur(1px)' }}>Affiliate Partner</div>
+            <div className="text-xs font-light filter blur-sm" style={{ filter: 'blur(1px)' }}>Blueroof India</div>
           </div>
         </div>
       </main>

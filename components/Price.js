@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const Price = () => {
   return (
-    <div className="mb-12">
-      <h2 className="text-4xl font-bold mb-8 text-center font-custom">Know More Details</h2>
+    <div className="mb-12 mt-8">
+      <h2 className="text-4xl font-bold mb-6 text-center font-custom">Know More Details</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="bg-gray-100 p-6 rounded-lg">
           <div className="relative w-full h-64 overflow-hidden rounded-lg">
