@@ -67,7 +67,7 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl font-light mt-2">
               with Panoramic Sea Views –
             </h2>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-red-500 mt-2">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-yellow-500 mt-2">
               Starting at 27 Cr*
             </h2>
           </div>

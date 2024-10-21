@@ -32,7 +32,7 @@ const Price = () => {
             />
           </div>
           <button className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
-            View Interior Details
+            View Plan
           </button>
         </div>
       </div>
