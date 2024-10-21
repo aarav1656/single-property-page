@@ -6,6 +6,7 @@ import Lenis from '@studio-freight/lenis'
 import { useTransform, useScroll, motion } from 'framer-motion';
 import Gallery from './Gallery';
 import AmenitiesSection from './AmenitiesSection';
+import FeaturesSection from './FeaturesSection';
 export default function Wow() {
   
   const gallery = useRef(null);
@@ -45,7 +46,7 @@ export default function Wow() {
   return (
     <main className={styles.main}>
       <div className={styles.spacer}>
-      <Gallery />
+        <FeaturesSection />
       </div>
       <div ref={gallery} className={styles.gallery}>
         <Column y={y}>

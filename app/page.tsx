@@ -10,7 +10,7 @@ import LuxuryProjectPricing from "../components/LuxuryProjectPricing"
 import Wow from "../components/Wow"
 
 export default function Home() {
-  const phoneNumber = "917738434767"; // Make sure this is the correct format for your country code
+  const phoneNumber = "917977144095"; // Make sure this is the correct format for your country code
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
