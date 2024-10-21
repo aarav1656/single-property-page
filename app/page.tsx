@@ -56,26 +56,22 @@ export default function Home() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           
-          {/* Text Overlay - Center Aligned */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-white p-4">
+          {/* Text Overlay - Left Aligned */}
+          <div className="absolute inset-0 flex flex-col items-start justify-center bg-black bg-opacity-40 text-white text-left p-4 pl-12">
             <h2 
-              className="text-5xl sm:text-7xl font-extrabold text-center"
+              className="text-5xl sm:text-7xl font-extrabold"
               style={{ fontFamily: "'Playfair Display', serif", letterSpacing: "1px" }}
             >
               Unparalleled Elegance
             </h2>
-            <h2 className="text-2xl sm:text-3xl font-light text-center mt-2">
-              with Panoramic Sea Views
+            <h2 className="text-2xl sm:text-3xl font-light mt-2">
+              with Panoramic Sea Views –
             </h2>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-yellow-500 text-center mt-2">
-              Starting at 27 Cr*
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-yellow-500 mt-2">
+              Starting at 27 Cr*  
             </h2>
           </div>
-
-          <div className="absolute top-4 right-4 text-white text-right opacity-30">
-            <div className="text-xs font-light">Affiliate Partner</div>
-            <div className="text-xs font-light">Blueroof India</div>
-          </div>
+          <div className="absolute top-4 right-4 text-white text-right opacity-30"> <div className="text-xs font-light">Affiliate Partner</div> <div className="text-xs font-light">Blueroof India</div> </div>
         </div>
       </main>
 
