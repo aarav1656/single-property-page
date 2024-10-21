@@ -8,7 +8,11 @@ import ProjectTeam from "../components/ProjectTeam"
 import AmenitiesSection from "../components/AmenitiesSection"
 import LuxuryProjectPricing from "../components/LuxuryProjectPricing"
 import Wow from "../components/Wow"
+
 export default function Home() {
+  const phoneNumber = "917738434767"; // Make sure this is the correct format for your country code
+  const whatsappUrl = `https://wa.me/${phoneNumber}`;
+
   return (
     <div className="min-h-screen bg-white">
       <header className="sticky top-0 z-50 bg-white shadow-md">
@@ -28,9 +32,14 @@ export default function Home() {
               <div className="text-xs text-gray-500">
                 Affiliate Partner Blueroof India
               </div>
-              <div className="flex items-center bg-yellow-400 px-4 py-2 rounded-md">
+              <a 
+                href={whatsappUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center bg-yellow-400 px-4 py-2 rounded-md hover:bg-yellow-500 transition duration-300"
+              >
                 <span className="ml-2">+91 77384 34767</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
