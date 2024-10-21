@@ -12,15 +12,15 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-          <div className="w-12 h-12 relative">
-                  <Image 
-                    src="/logo.png" 
-                    alt="Logo" 
-                    layout="fill" 
-                    objectFit="contain" 
-                    className="rounded"
-                  />
-                </div>
+            <div className="w-12 h-12 relative">
+              <Image 
+                src="/logo.png" 
+                alt="Logo" 
+                layout="fill" 
+                objectFit="contain" 
+                className="rounded"
+              />
+            </div>
             {/* Navigation */}
             <nav className="hidden md:flex space-x-4">
               <select className="bg-transparent">
@@ -33,7 +33,7 @@ export default function Home() {
               ))}
             </nav>
 
-            {/* WhatsApp Button, Affiliate Partner Text, and Logo */}
+            {/* WhatsApp Button */}
             <div className="flex items-center space-x-4">
               <a 
                 href={whatsappUrl} 
@@ -43,16 +43,6 @@ export default function Home() {
               >
                 <span className="ml-2">+91 7977144095</span>
               </a>
-              
-              <div className="flex items-center space-x-2 text-xs text-gray-300 text-right">
-                <div>
-                  <div>Affiliate Partner</div>
-                  <div className="text-gray-300 text-xs">Blueroof India</div>
-                </div>
-                
-                {/* Logo Image */}
-               
-              </div>
             </div>
           </div>
         </div>
@@ -65,6 +55,22 @@ export default function Home() {
             alt="Luxury Sea View"
             className="absolute inset-0 w-full h-full object-cover"
           />
+          
+          {/* Text Overlay - Left Aligned */}
+          <div className="absolute inset-0 flex flex-col items-start justify-center bg-black bg-opacity-40 text-white text-left p-4 pl-12">
+            <h2 
+              className="text-5xl sm:text-7xl font-extrabold"
+              style={{ fontFamily: "'Playfair Display', serif", letterSpacing: "1px" }}
+            >
+              Unparalleled Elegance
+            </h2>
+            <h2 className="text-2xl sm:text-3xl font-light mt-2">
+              with Panoramic Sea Views –
+            </h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-red-500 mt-2">
+              Starting at 27 Cr*
+            </h2>
+          </div>
         </div>
       </main>
 

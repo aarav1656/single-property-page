@@ -8,6 +8,7 @@ import AmenitiesSection from './AmenitiesSection';
 import FeaturesSection from './FeaturesSection';
 import LuxuryProjectPricing from './LuxuryProjectPricing';
 import ProjectTeam from './ProjectTeam';
+import IntroSection from './IntroSection';
 
 export default function Wow() {
   const gallery = useRef(null);
@@ -47,7 +48,7 @@ export default function Wow() {
   return (
     <main className={styles.main}>
       <div className={styles.spacer}>
-        <LuxuryProjectPricing />
+      <LuxuryProjectPricing />
       </div>
       <div ref={gallery} className={styles.gallery} style={{ minHeight: `${height * 2}px` }}>
         <Column y={y}>
