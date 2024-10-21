@@ -64,14 +64,18 @@ export default function Home() {
             >
               Unparalleled Elegance
             </h2>
-            <h2 className="text-2xl sm:text-3xl font-light mt-2">
+            <h2 className="text-2xl sm:text-7xl font-extrabold" style={{ fontFamily: "'Playfair Display', serif", letterSpacing: "1px" }}>
               with Panoramic Sea Views –
             </h2>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-red-500 mt-2">
+            <h2 className="text-2xl sm:text-5xl font-extrabold text-red-500 mt-2">
               Starting at 27 Cr*
             </h2>
           </div>
         </div>
+        <div className="absolute top-4 right-4 text-white text-right">
+            <div className="text-sm font-light">Affiliate Partner</div>
+            <div className="text-xs font-light">Blueroof India</div>
+          </div>
       </main>
 
       <footer className="bg-gray-100 py-4">
