@@ -29,7 +29,7 @@ export default function Home() {
                 Affiliate Partner Blueroof India
               </div>
               <div className="flex items-center bg-yellow-400 px-4 py-2 rounded-md">
-                <span className="ml-2">+91 7542821904</span>
+                <span className="ml-2">+91 77384 34767</span>
               </div>
             </div>
           </div>

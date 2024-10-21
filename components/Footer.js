@@ -11,8 +11,8 @@ const Footer = () => {
         
         <div className="relative z-10 flex justify-between items-center mb-8">
           <div className="flex items-center space-x-4">
-            <Image src="/25-downtown-logo.png" alt="25 Blueroof" width={100} height={50} />
-            <Image src="/s-cube-logo.png" alt="Blueroof" width={100} height={50} />
+            <Image src="/logo.png" alt="25 Blueroof" width={100} height={50} />
+            {/* <Image src="/s-cube-logo.png" alt="Blueroof" width={100} height={50} /> */}
           </div>
           <div className="w-24 h-24 bg-gray-300">
           <Image

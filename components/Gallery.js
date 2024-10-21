@@ -21,7 +21,7 @@ const Gallery = () => {
           <img src="https://www.nozone.it/dynamic/img/render-interni.jpg" alt="Large property image" className="w-full h-full object-cover" />
         </div>
         <div className="h-48 bg-gray-200">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyCJgQBlujO46TVTEPvpkoY0yvckRx6BgWmQ&s" alt="Property image 2" className="w-full h-full object-cover" />
+          <img src="https://image.slidesdocs.com/responsive-images/background/luxurious-3d-rendering-of-a-hotel-suite-bedroom-with-lavish-amenities-including-tv-and-chandelier-powerpoint-background_a950fdc736__960_540.jpg" alt="Property image 2" className="w-full h-full object-cover" />
         </div>
         <div className="h-48 bg-gray-200">
           <img src="https://static.wixstatic.com/media/e4b0d9_1b8f49f049504c83a80b689509242087~mv2.jpg/v1/fill/w_640,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/e4b0d9_1b8f49f049504c83a80b689509242087~mv2.jpg" alt="Property image 3" className="w-full h-full object-cover" />
@@ -33,7 +33,7 @@ const Gallery = () => {
           <img src="https://25residences.com/wp-content/uploads/2024/04/25-downtown-1920x1274.jpg" alt="Property image 5" className="w-full h-full object-cover" />
         </div>
         <div className="h-48 bg-gray-200">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQExJewvAv_ScFjfu1hlHMojuT2XF_lvpe4RA&s" alt="Property image 2" className="w-full h-full object-cover" />
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/026/577/159/small_2x/modern-bedroom-interior-design-in-apartment-or-house-with-furniture-luxury-bedroom-scandinavian-concept-by-ai-generated-free-photo.jpg" alt="Property image 2" className="w-full h-full object-cover" />
         </div>
       </div>
     </div>
