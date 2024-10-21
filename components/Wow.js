@@ -9,6 +9,7 @@ import FeaturesSection from './FeaturesSection';
 import LuxuryProjectPricing from './LuxuryProjectPricing';
 import ProjectTeam from './ProjectTeam';
 import IntroSection from './IntroSection';
+import Maps from './Maps'
 
 export default function Wow() {
   const gallery = useRef(null);
@@ -73,8 +74,9 @@ export default function Wow() {
       </div>
       <AmenitiesSection />
       <FeaturesSection />
-
+ 
       <ProjectTeam />
+     
      
     </main>
   );

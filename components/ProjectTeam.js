@@ -1,6 +1,8 @@
 import React from 'react';
 import { Users } from 'lucide-react';
 import Footer from './Footer';
+import Maps from './Maps';
+import Price from './Price'
 
 const ProjectTeam = () => {
   const teamMembers = [
@@ -59,6 +61,8 @@ const ProjectTeam = () => {
           className="rounded-lg shadow-lg max-w-3xl w-full"
         />
       </div>
+      <Price />
+      <Maps />
       <Footer />
     </div>
   );

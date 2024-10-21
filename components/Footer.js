@@ -11,17 +11,17 @@ const Footer = () => {
         
         {/* Location Section with Map Preview */}
         <div className="mb-8 text-center">
-          <h4 className="text-gray-600 text-lg font-semibold">Our Location</h4>
-          <a 
+          {/* <h4 className="text-gray-600 text-lg font-semibold">Our Location</h4> */}
+          {/* <a 
             href="https://maps.app.goo.gl/ArQWntireS7LHJeX9" 
             target="_blank" 
-            rel="noopener noreferrer" 
+            rel="noopener noreferrer"   
             className="text-gray-600 underline text-sm mb-2 block"
           >
             View Location on Google Maps
-          </a>
+          </a> */}
           <div className="flex justify-center mb-4">
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3797.5002441702504!2d72.819386!3d18.978396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf000d02a0d1%3A0xf05aa4bfce080823!2s25%20Downtown!5e1!3m2!1sen!2sin!4v1729495765457!5m2!1sen!2sin"
               width="300"
               height="200"
@@ -29,7 +29,7 @@ const Footer = () => {
               style={{ border: 0 }}
               allowFullScreen
               title="Location Map"
-            ></iframe>
+            ></iframe> */}
           </div>
         </div>
 
