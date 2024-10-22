@@ -26,34 +26,34 @@ const PriceTable = ({ onRequestBreakup }) => (
     <table className="w-full border-collapse">
       <thead>
         <tr>
-          <th className="text-left py-4 px-6 bg-white font-['Montserrat'] text-gray-800 text-lg">Type</th>
-          <th className="text-left py-4 px-6 bg-white font-['Montserrat'] text-gray-800 text-lg">Saleable Area</th>
-          <th className="text-left py-4 px-6 bg-white font-['Montserrat'] text-gray-800 text-lg">Price</th>
+          <th className="text-center py-4 px-6 bg-white font-['Montserrat'] text-gray-800 text-lg">Type</th>
+          <th className="text-center py-4 px-6 bg-white font-['Montserrat'] text-gray-800 text-lg">Saleable Area</th>
+          <th className="text-center py-4 px-6 bg-white font-['Montserrat'] text-black text-lg">Price</th>
           <th className="py-4 px-6 bg-white"></th>
         </tr>
       </thead>
       <tbody>
         <tr className="bg-gray-50">
-          <td className="py-4 px-6 text-gray-800">4 BHK</td>
-          <td className="py-4 px-6 text-gray-800">3400 Sq.Ft.</td>
-          <td className="py-4 px-6 text-gray-800">₹ 27.49 Cr* Onwards</td>
-          <td className="py-4 px-6">
+          <td className="py-4 px-6 text-gray-800 text-center">4 BHK</td>
+          <td className="py-4 px-6 text-gray-800 text-center">3400 Sq.Ft.</td>
+          <td className="py-4 px-6 text-gray-800 text-center">₹ 27.49 Cr* Onwards</td>
+          <td className="py-4 px-6 text-center">
             <button 
               onClick={onRequestBreakup}
-              className="bg-yellow-400 text-white py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 text-sm font-medium"
+              className="bg-yellow-400 text-black py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 text-sm font-medium"
             >
               Request For Price Breakup
             </button>
           </td>
         </tr>
         <tr className="bg-white">
-          <td className="py-4 px-6 text-gray-800">5 BHK</td>
-          <td className="py-4 px-6 text-gray-800">5100 Sq.Ft.</td>
-          <td className="py-4 px-6 text-gray-800">₹ 40.46 Cr* Onwards</td>
-          <td className="py-4 px-6">
+          <td className="py-4 px-6 text-gray-800 text-center">5 BHK</td>
+          <td className="py-4 px-6 text-gray-800 text-center">5100 Sq.Ft.</td>
+          <td className="py-4 px-6 text-gray-800 text-center">₹ 40.46 Cr* Onwards</td>
+          <td className="py-4 px-6 text-center">
             <button 
               onClick={onRequestBreakup}
-              className="bg-yellow-400 text-white py-2 px-4 rounded hover:bg-amber-700 transition duration-300 text-sm font-medium"
+              className="bg-yellow-400 text-black py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 text-sm font-medium"
             >
               Request For Price Breakup
             </button>
@@ -80,8 +80,8 @@ const ContactForm = ({ onClose }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if (name === 'phone' && value.length > 10) return; // Prevent more than 10 digits
-    if (name === 'phone' && !/^\d*$/.test(value)) return; // Only allow digits
+    if (name === 'phone' && value.length > 10) return;
+    if (name === 'phone' && !/^\d*$/.test(value)) return;
     
     setFormData(prev => ({
       ...prev,
@@ -94,7 +94,6 @@ const ContactForm = ({ onClose }) => {
     setStatus('loading');
     setError('');
 
-    // Validation
     if (!formData.name.trim()) {
       setError('Please enter your name');
       setStatus('error');
@@ -136,61 +135,70 @@ const ContactForm = ({ onClose }) => {
   };
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Us</h2>
+    <div className="p-8 bg-[#faf9f6]">
+      <div className="flex justify-center mb-8">
+        <div className="w-12 h-12 relative">
+          <Image
+            src="/logo.jpeg"
+            alt="Logo"
+            fill
+            style={{ objectFit: 'contain' }}
+            className="w-full h-full"
+          />
+        </div>
+      </div>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-800 mb-1">
             Name *
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-none bg-transparent focus:outline-none focus:border-gray-500"
               required
             />
           </label>
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Phone Number *
+          <label className="block text-sm font-medium text-gray-800 mb-1">
+            Phone *
             <input
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="Enter 10-digit number"
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-none bg-transparent focus:outline-none focus:border-gray-500"
               required
             />
           </label>
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-800 mb-1">
             Email *
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-none bg-transparent focus:outline-none focus:border-gray-500"
               required
             />
           </label>
         </div>
 
         {status === 'error' && (
-          <div className="p-3 rounded-md bg-red-50 text-red-700 text-sm">
+          <div className="p-3 bg-red-50 text-red-700 text-sm">
             {error}
           </div>
         )}
 
         {status === 'success' && (
-          <div className="p-3 rounded-md bg-green-50 text-green-700 text-sm">
+          <div className="p-3 bg-green-50 text-green-700 text-sm">
             Message sent successfully!
           </div>
         )}
@@ -198,7 +206,7 @@ const ContactForm = ({ onClose }) => {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-3 px-4 text-white bg-[#1b4d3e] hover:bg-[#163c31] transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === 'loading' ? (
             <span className="flex items-center justify-center">
@@ -206,17 +214,16 @@ const ContactForm = ({ onClose }) => {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
               </svg>
-              Sending...
+              Submitting...
             </span>
           ) : (
-            'Send Message'
+            'Submit'
           )}
         </button>
       </form>
     </div>
   );
 };
-
 const Price = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
