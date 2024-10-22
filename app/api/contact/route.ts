@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
-    const { name, email, subject, message } = await request.json();
+    const { name, phone, email } = await request.json();
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -18,24 +18,21 @@ export async function POST(request: Request) {
       from: `"${name}" <${email}>`,  // This shows sender's name and email
       to: process.env.EMAIL_USER,    // Your email where you'll receive messages
       replyTo: email,               // Allows you to reply directly to sender
-      subject: `Portfolio Contact: ${subject || 'New Message'}`,
+      // subject: `Portfolio Contact: ${subject || 'New Message'}`,
       text: `
         Message from: ${name}
+        Phone: ${phone}
         Email: ${email}
-        Subject: ${subject}
         
-        Message:
-        ${message}
       `,
       // Adding HTML version for better formatting
       html: `
         <h2>New Message from Portfolio Contact Form</h2>
         <p><strong>From:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Email:</strong> ${phone}</p>
+        <p><strong>Subject:</strong> ${email}</p>
         <br/>
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br/>')}</p>
       `
     };
 
