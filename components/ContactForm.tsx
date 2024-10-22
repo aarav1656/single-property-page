@@ -1,27 +1,6 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 
-const Modal = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg w-full max-w-xl relative">
-        <button 
-          onClick={onClose}
-          className="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        {children}
-      </div>
-    </div>
-  );
-};
-
-const ContactForm = ({ onClose }) => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -31,7 +10,7 @@ const ContactForm = ({ onClose }) => {
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -39,7 +18,7 @@ const ContactForm = ({ onClose }) => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('loading');
     
@@ -62,9 +41,6 @@ const ContactForm = ({ onClose }) => {
       
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => {
-        onClose();
-      }, 2000);
     } catch (err) {
       setError('Failed to send message. Please try again later.');
       setStatus('error');
@@ -72,8 +48,8 @@ const ContactForm = ({ onClose }) => {
   };
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Us</h2>
+    <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Me</h2>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -165,55 +141,4 @@ const ContactForm = ({ onClose }) => {
   );
 };
 
-const Price = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  return (
-    <div className="mb-12 mt-8">
-      <h2 className="text-4xl font-bold mb-6 text-center font-custom">Know More Details</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-gray-100 p-6 rounded-lg">
-          <div className="relative w-full h-64 overflow-hidden rounded-lg">
-            <Image
-              src="/bill.jpeg"
-              alt="Payment Details"
-              fill
-              style={{ objectFit: 'cover' }}
-              className="filter blur-sm"
-            />
-          </div>
-          <button 
-            onClick={() => setIsModalOpen(true)}
-            className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
-          >
-            Know Payment Details
-          </button>
-        </div>
-
-        <div className="bg-gray-100 p-6 rounded-lg">
-          <div className="relative w-full h-64 overflow-hidden rounded-lg">
-            <Image
-              src="/arch.jpeg"
-              alt="Interior Details"
-              fill
-              style={{ objectFit: 'cover' }}
-              className="filter blur-sm"
-            />
-          </div>
-          <button 
-            onClick={() => setIsModalOpen(true)}
-            className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
-          >
-            View Plan
-          </button>
-        </div>
-      </div>
-
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <ContactForm onClose={() => setIsModalOpen(false)} />
-      </Modal>
-    </div>
-  );
-};
-
-export default Price;
+export default ContactForm;
