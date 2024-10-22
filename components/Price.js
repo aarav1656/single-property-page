@@ -21,18 +21,68 @@ const Modal = ({ isOpen, onClose, children }) => {
   );
 };
 
+const PriceTable = ({ onRequestBreakup }) => (
+  <div className="overflow-x-auto w-full mb-8">
+    <table className="w-full border-collapse">
+      <thead>
+        <tr>
+          <th className="text-left py-4 px-6 bg-white font-['Montserrat'] text-gray-800 text-lg">Type</th>
+          <th className="text-left py-4 px-6 bg-white font-['Montserrat'] text-gray-800 text-lg">Saleable Area</th>
+          <th className="text-left py-4 px-6 bg-white font-['Montserrat'] text-gray-800 text-lg">Price</th>
+          <th className="py-4 px-6 bg-white"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr className="bg-gray-50">
+          <td className="py-4 px-6 text-gray-800">4 BHK</td>
+          <td className="py-4 px-6 text-gray-800">3400 Sq.Ft.</td>
+          <td className="py-4 px-6 text-gray-800">₹ 27.49 Cr* Onwards</td>
+          <td className="py-4 px-6">
+            <button 
+              onClick={onRequestBreakup}
+              className="bg-amber-600 text-white py-2 px-4 rounded hover:bg-amber-700 transition duration-300 text-sm font-medium"
+            >
+              Request For Price Breakup
+            </button>
+          </td>
+        </tr>
+        <tr className="bg-white">
+          <td className="py-4 px-6 text-gray-800">5 BHK</td>
+          <td className="py-4 px-6 text-gray-800">5100 Sq.Ft.</td>
+          <td className="py-4 px-6 text-gray-800">₹ 40.46 Cr* Onwards</td>
+          <td className="py-4 px-6">
+            <button 
+              onClick={onRequestBreakup}
+              className="bg-amber-600 text-white py-2 px-4 rounded hover:bg-amber-700 transition duration-300 text-sm font-medium"
+            >
+              Request For Price Breakup
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+);
+
 const ContactForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    subject: '',
-    message: ''
+    phone: '',
+    email: ''
   });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
 
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[0-9]{10}$/;
+    return phoneRegex.test(phone);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === 'phone' && value.length > 10) return; // Prevent more than 10 digits
+    if (name === 'phone' && !/^\d*$/.test(value)) return; // Only allow digits
+    
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -42,9 +92,23 @@ const ContactForm = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
-    
-    if (!formData.email.includes('@') || !formData.name || !formData.message) {
-      setError('Please fill all required fields with valid information');
+    setError('');
+
+    // Validation
+    if (!formData.name.trim()) {
+      setError('Please enter your name');
+      setStatus('error');
+      return;
+    }
+
+    if (!validatePhone(formData.phone)) {
+      setError('Please enter a valid 10-digit phone number');
+      setStatus('error');
+      return;
+    }
+
+    if (!formData.email.includes('@')) {
+      setError('Please enter a valid email address');
       setStatus('error');
       return;
     }
@@ -61,7 +125,7 @@ const ContactForm = ({ onClose }) => {
       if (!response.ok) throw new Error('Failed to send message');
       
       setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: '', phone: '', email: '' });
       setTimeout(() => {
         onClose();
       }, 2000);
@@ -92,12 +156,13 @@ const ContactForm = ({ onClose }) => {
         
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Email *
+            Phone Number *
             <input
-              type="email"
-              name="email"
-              value={formData.email}
+              type="tel"
+              name="phone"
+              value={formData.phone}
               onChange={handleChange}
+              placeholder="Enter 10-digit number"
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
               required
             />
@@ -106,25 +171,12 @@ const ContactForm = ({ onClose }) => {
         
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Subject
+            Email *
             <input
-              type="text"
-              name="subject"
-              value={formData.subject}
+              type="email"
+              name="email"
+              value={formData.email}
               onChange={handleChange}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </label>
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Message *
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows={4}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
               required
             />
@@ -170,7 +222,12 @@ const Price = () => {
 
   return (
     <div className="mb-12 mt-8">
-      <h2 className="text-4xl font-bold mb-6 text-center font-custom">Know More Details</h2>
+      <div className="mb-8">
+        <h2 className="text-2xl font-['Montserrat'] font-bold mb-2 inline-block border border-amber-500 text-amber-600 rounded-full px-6 py-2">Price</h2>
+      </div>
+      
+      <PriceTable onRequestBreakup={() => setIsModalOpen(true)} />
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="bg-gray-100 p-6 rounded-lg">
           <div className="relative w-full h-64 overflow-hidden rounded-lg">

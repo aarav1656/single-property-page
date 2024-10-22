@@ -16,51 +16,55 @@ const ProjectTeam = () => {
   ];
 
   return (
-    <div className="bg-stone-100 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <Users className="mx-auto h-12 w-12 text-stone-600" />
-          <h2 className="mt-2 text-3xl font-extrabold text-stone-900 sm:text-4xl">
+    <div className="bg-stone-100 py-8 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-6">
+          <Users className="mx-auto h-8 w-8 text-stone-600" />
+          <h2 className="mt-1 text-2xl font-bold text-stone-900">
             Our Project Team
           </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-stone-500 sm:mt-4">
+          <p className="mt-2 text-base text-stone-500">
             Meet the experts behind our exceptional designs
           </p>
         </div>
+        
         <div className="flex flex-col items-center">
           {/* First team member in the middle */}
-          <div className="mb-12 text-center">
-            <h3 className="text-xl font-medium text-stone-900">{teamMembers[0].role}</h3>
-            <p className="mt-1 text-lg text-stone-500">{teamMembers[0].name}</p>
+          <div className="mb-6 text-center">
+            <h3 className="text-lg font-medium text-stone-900">{teamMembers[0].role}</h3>
+            <p className="text-base text-stone-500">{teamMembers[0].name}</p>
           </div>
+          
           {/* Two columns with 3 members each */}
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-8">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div className="space-y-4">
               {teamMembers.slice(1, 4).map((member, index) => (
-                <div key={index} className="text-center">
-                  <h3 className="text-lg font-medium text-stone-900">{member.role}</h3>
-                  <p className="mt-1 text-sm text-stone-500">{member.name}</p>
+                <div key={index} className="text-center py-2">
+                  <h3 className="text-base font-medium text-stone-900">{member.role}</h3>
+                  <p className="text-sm text-stone-500">{member.name}</p>
                 </div>
               ))}
             </div>
-            <div className="space-y-8">
+            <div className="space-y-4">
               {teamMembers.slice(4).map((member, index) => (
-                <div key={index} className="text-center">
-                  <h3 className="text-lg font-medium text-stone-900">{member.role}</h3>
-                  <p className="mt-1 text-sm text-stone-500">{member.name}</p>
+                <div key={index} className="text-center py-2">
+                  <h3 className="text-base font-medium text-stone-900">{member.role}</h3>
+                  <p className="text-sm text-stone-500">{member.name}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
+
+        <div className="flex justify-center mb-8">
+          <img
+            src="https://img.freepik.com/premium-photo/architect-planning-blueprint-with-designer-engineer-working-as-team-construction-architecture-design-industry-building-teamwork-collaboration-with-hands-contractor_590464-82151.jpg"
+            alt="Team collaboration"
+            className="rounded-lg shadow-lg max-w-2xl w-full object-cover h-48 md:h-64"
+          />
+        </div>
       </div>
-      <div className="mt-16 flex justify-center">
-        <img
-          src="https://img.freepik.com/premium-photo/architect-planning-blueprint-with-designer-engineer-working-as-team-construction-architecture-design-industry-building-teamwork-collaboration-with-hands-contractor_590464-82151.jpg"
-          alt="Team collaboration"
-          className="rounded-lg shadow-lg max-w-3xl w-full"
-        />
-      </div>
+      
       <Price />
       <Maps />
       <Footer />
