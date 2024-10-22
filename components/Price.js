@@ -33,10 +33,10 @@ const PriceTable = ({ onRequestBreakup }) => (
         </tr>
       </thead>
       <tbody>
-        <tr className="bg-gray-50">
-          <td className="py-4 px-6 text-gray-800 text-center">4 BHK</td>
-          <td className="py-4 px-6 text-gray-800 text-center">3400 Sq.Ft.</td>
-          <td className="py-4 px-6 text-gray-800 text-center">₹ 27.49 Cr* Onwards</td>
+      <tr className="bg-gray-50">
+          <td className="py-4 px-6 font-['Montserrat'] text-black text-center">4 BHK</td>
+          <td className="py-4 px-6 font-['Montserrat'] text-black text-center">3400 Sq.Ft.</td>
+          <td className="py-4 px-6 font-['Montserrat'] text-black text-center">₹ 27.49 Cr* Onwards</td>
           <td className="py-4 px-6 text-center">
             <button 
               onClick={onRequestBreakup}
@@ -230,7 +230,7 @@ const Price = () => {
   return (
     <div className="mb-12 mt-8">
       <div className="mb-8">
-        <h2 className="text-2xl font-['Montserrat'] font-bold mb-2 inline-block border bg-yellow-400 text-amber-600 rounded-full px-6 py-2">Price</h2>
+        <h2 className="text-2xl font-['Montserrat'] font-bold mb-2 inline-block border bg-yellow-400 text-black rounded-full px-6 py-2">Price</h2>
       </div>
       
       <PriceTable onRequestBreakup={() => setIsModalOpen(true)} />
