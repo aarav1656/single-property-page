@@ -71,6 +71,7 @@ export default function Wow() {
         <Column y={y4}>
           <ImageContainer src="/10.jpeg" alt="Image 10" />
           <ImageContainer src="/11.jpeg" alt="Image 11" />
+          {/* <ImageContainer src="/12.jpeg" alt="Image 11" /> */}
         </Column>
       </div>
       <AmenitiesSection />
